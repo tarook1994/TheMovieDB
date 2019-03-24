@@ -1,19 +1,25 @@
-.demo-card-image.mdl-card {
-    width: 256px;
-    height: 256px;
+.card {
+    border: 1px solid #d3d3d3;
+    border-radius: .25rem;
   }
-  .image {
-    width: 256px;
-    height: 256px;
-    background:  center / cover;
+  
+  .bg-img {
+    background-size: cover;
+    min-height: 150px;
+    max-width: 100%;
+    background-position: center;
+    background-color: #ccc;
   }
-  .demo-card-image > .mdl-card__actions {
-    height: 52px;
-    padding: 16px;
-    background: rgba(0, 0, 0, 0.2);
+  
+  .content {
+    padding: 15px;
+    color: black
   }
-  .demo-card-image__filename {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
+  
+  button {
+    background-color: transparent;
+    border: 1px solid #2196F3;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
   }

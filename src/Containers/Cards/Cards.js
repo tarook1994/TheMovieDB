@@ -3,6 +3,7 @@ import Axios from 'axios'
 import Card from '../../Components/Card/Card'
 import TitlebarGridList from '../../Components/TitlebarGridList/TitlebarGridList';
 import AUX from '../../HOC/Auxillary'
+import './Cards.css'
 
 const API_KEY = 'e6f375a40042abd253b3b3601cf0f895';
 
@@ -26,14 +27,23 @@ class Cards extends Component {
     render() {
         let card = <h1>Loading</h1>
         if (this.state.moviesLoaded) {
-            card = <TitlebarGridList
-                data={this.state.movies} />
+             card = this.state.movies.map((movie, index) => {
+                return (
+                    <Card
+                        key={movie.id}
+                        data={movie} />
+                )
+
+            })
+
         }
 
         return (
-            <AUX>
+
+            <div className='grid-container'>
                 {card}
-            </AUX>
+            </div>
+
 
         )
     }
