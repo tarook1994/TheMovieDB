@@ -1,6 +1,8 @@
 
 .Nav  {
     background-color: black;
+    position: fixed;
+    width: 100%;
 
 }
 
