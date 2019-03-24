@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     color: white;
-    padding: 50px
+    padding: 50px;
+    background-color: ivory
 }
 

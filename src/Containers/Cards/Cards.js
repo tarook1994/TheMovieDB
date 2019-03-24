@@ -14,7 +14,7 @@ class Cards extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=' + API_KEY + '&language=en-US&page=1').then(response => {
+        Axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=' + API_KEY + '&language=en-US&page=1').then(response => {
             console.log(response)
             this.setState({
                 movies: response.data.results,
