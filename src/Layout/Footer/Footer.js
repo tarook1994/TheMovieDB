@@ -5,8 +5,8 @@ const footer = (props) => {
     return (
         <div id="copyright" className="containerTwo">
             <p>&copy; Untitled. All rights reserved. | Photos by
-                <a href="http://fotogrph.com/">Fotogrph</a> | Design by
-                <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.
+                <a href="#"> Fotogrph</a> | Design by
+                <a href="#" rel="nofollow"> Ahmed Tarek</a>.
                 </p>
         </div>
     )

@@ -37,15 +37,14 @@ class App extends Component {
           finishedRequest: true
         })
       })
+
   }
-
-
 
 
   navButtonListener = (page) => {
     this.setState({
       loadedPage: page,
-      finishedRequest:false,
+      finishedRequest: false,
       moviesLoaded: false
     })
   }
