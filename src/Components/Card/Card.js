@@ -10,8 +10,8 @@ const card = (props) => {
         <h4>{props.data.title}</h4>
         <p>{props.data.overview}</p>
         <div>
-          <button>More Detials</button>
-          <button>Favorite</button>
+          <button onClick={() => props.click(props.index)}>More Detials</button>
+          
         </div>
 
       </div>

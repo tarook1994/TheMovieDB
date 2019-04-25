@@ -1,0 +1,15 @@
+.img-div,
+.content-div {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    padding:  30px;
+    margin: auto;
+}
+
+.img-div img {
+    width: 300px;
+    height: 400px;
+    
+}
+

@@ -1,5 +1,7 @@
 import React from 'react';
 import './TestNav.css'
+import { Link, NavLink } from 'react-router-dom';
+import { NavHashLink  } from 'react-router-hash-link';
 
 const testNav = (props) => {
     return (
@@ -7,20 +9,46 @@ const testNav = (props) => {
             <div id="header" className="container">
                 <div id="menu">
                     <ul>
-                        <li className="active"><a href="/popular" accessKey="1" title="">Homepage</a></li>
-                        <li><a href="/upcoming" accessKey="2" title="">Upcoming</a></li>
-                        <li><a href="/toprated" accessKey="3" title="">Top Rated</a></li>
-                        <li><a href="#" accessKey="5" title="">About Us</a></li>
+                        <li >
+
+                            <NavLink smooth to="/popular" onClick={() => props.click('popular')} 
+                            activeStyle={{
+                                background: '#2651a8',
+                                borderRadius: '6px',
+                                color: 'white'
+                            }}
+                            >Homepage</NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                exact
+                                to="/upcoming" onClick={() => props.click('upcoming')} activeStyle={{
+                                    background: '#2651a8',
+                                    borderRadius: '6px',
+                                    color: 'white'
+                                }}>Upcoming</NavLink></li>
+                        <li><NavLink
+                            exact
+                            activeStyle={{
+                                background: '#2651a8',
+                                borderRadius: '6px',
+                                color: 'white'
+                            }} to="/toprated" onClick={() => props.click('top_rated')}>Top Rated</NavLink></li>
+                        <li><NavLink
+                            exact
+                            activeStyle={{
+                                background: '#2651a8',
+                                borderRadius: '6px',
+                                color: 'white'
+                            }} to="/aboutus" >About Us</NavLink></li>
                     </ul>
                 </div>
             </div>
             <div id="banner" className="container">
                 <div className="title">
-               Best
+                    Best
                 </div>
-                <ul className="actions">
-                    <li><a href="#" className="button">Start Surfing</a></li>
-                </ul>
+                
             </div>
         </div>
     )

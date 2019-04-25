@@ -102,6 +102,8 @@ ul.actions li
 }
 
 
+
+
 /*********************************************************************************/
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
@@ -353,11 +355,15 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.8em;
+    margin : 4px;
     color: rgba(255,255,255,0.80);
 }
 
 #menu li:hover a, #menu li.active a, #menu li.active span
 {
+    background: #2651a8;
+    border-radius: 6px;
+    color: rgba(255,255,255,1);
 }
 
 #menu .active a
@@ -523,5 +529,11 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
 {
     text-align: center;
     color: rgba(0,0,0,.5);
+}
+
+.scrolling {
+    background: '#2651a8';
+    border-radius: '6px';
+    color: 'white'
 }
 
