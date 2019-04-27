@@ -7,6 +7,7 @@ import Footer from './Layout/Footer/Footer'
 import { BrowserRouter } from 'react-router-dom';
 import Axios from 'axios'
 import DetailsPage from './Containers/DetailsPage/DetailsPage'
+import About from './Components/About/About'
 
 
 import Navigation from './Layout/Navigation/Navigation'
@@ -74,10 +75,14 @@ class App extends Component {
       } else {
         displayedPage = <h1>Loading</h1>;
       }
-    } else {
+    } else if(this.state.current==='detail'){
       displayedPage = <DetailsPage
       content = {this.state.movies[this.state.detailID]}/>
       console.log(this.state.movies[this.state.detailID])
+    } 
+
+    if(this.state.loadedPage === 'aboutus'){
+      displayedPage  = <About/>
     }
 
     return (
@@ -89,10 +94,6 @@ class App extends Component {
           {
             displayedPage
           }
-
-          
-
-
 
           <Footer />
 

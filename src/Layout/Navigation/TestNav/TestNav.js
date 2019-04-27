@@ -40,7 +40,8 @@ const testNav = (props) => {
                                 background: '#2651a8',
                                 borderRadius: '6px',
                                 color: 'white'
-                            }} to="/aboutus" >About Us</NavLink></li>
+                            }} to="/aboutus" 
+                            onClick={() => props.click('aboutus')}>About Us</NavLink></li>
                     </ul>
                 </div>
             </div>
