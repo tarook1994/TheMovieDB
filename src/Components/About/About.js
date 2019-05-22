@@ -3,10 +3,8 @@ import './About.css'
 
 const about = (props) => {
     return (
-        <div className="big-div">
-            <div className="container-div">
-
-            </div>
+        <div className="wrapper">
+          
         </div>
     )
 }

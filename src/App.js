@@ -7,7 +7,7 @@ import Footer from './Layout/Footer/Footer'
 import { BrowserRouter } from 'react-router-dom';
 import Axios from 'axios'
 import DetailsPage from './Containers/DetailsPage/DetailsPage'
-import About from './Components/About/About'
+import AboutPopUp from './Components/AboutPopUp/AboutPopUp'
 
 
 import Navigation from './Layout/Navigation/Navigation'
@@ -49,15 +49,17 @@ class App extends Component {
       loadedPage: page,
       finishedRequest: false,
       moviesLoaded: false,
-      current:'main'
+      current: 'main'
     })
-    
+
   }
 
   cardClickHander = (id) => {
     console.log(id)
-    this.setState({ current: 'detail',
-                    detailID: id})
+    this.setState({
+      current: 'detail',
+      detailID: id
+    })
   }
 
   render() {
@@ -66,32 +68,42 @@ class App extends Component {
     }
 
     let displayedPage = null;
-    if(this.state.current==='main'){
-      if(this.state.movies){
+    if (this.state.current === 'main') {
+      if (this.state.movies) {
         displayedPage = <Cards
-        movies={this.state.movies}
-        moviesLoaded={this.state.moviesLoaded}
-        click={this.cardClickHander} />
+          movies={this.state.movies}
+          moviesLoaded={this.state.moviesLoaded}
+          click={this.cardClickHander} />
       } else {
         displayedPage = <h1>Loading</h1>;
       }
-    } else if(this.state.current==='detail'){
+    } else if (this.state.current === 'detail') {
       displayedPage = <DetailsPage
-      content = {this.state.movies[this.state.detailID]}/>
+        content={this.state.movies[this.state.detailID]} />
       console.log(this.state.movies[this.state.detailID])
-    } 
-
-    if(this.state.loadedPage === 'aboutus'){
-      displayedPage  = <About/>
     }
+
+    const data = {
+      name: 'Ahmed Tarek',
+      bio: 'I am a 25 year old  Engineer. I am currently working as a Technical Support Engineer at Dell EMC. I have a 4 years experience in programming using Java. Programming is one of my biggest motivations. I believe that programming is a kind of a super power that makes significant changes to the world. Therefore, developers have a huge role in making people’s life easier.',
+      github : 'https://github.com/tarook1994',
+      email : 'Ahmed-tarek94@hotmail.com'
+    }
+    const about = this.state.loadedPage === 'aboutus' ? <AboutPopUp
+      data = {data} /> : null
+
 
     return (
       <BrowserRouter>
         <div>
           {/* <Navigation/> */}
           <TestNav click={this.navButtonListener} />
+          {
+            about
+          }
 
           {
+
             displayedPage
           }
 
