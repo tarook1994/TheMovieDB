@@ -9,7 +9,7 @@ import spring from '../../Assets/Images/spring.png'
 
 const aboutPopUp = (props) => {
     return (
-        <div className="hover_bkgr_fricc" onClick={props.remove}>
+        <div className="hover_bkgr_fricc" onClick={props.removeAbout}>
             <span className="helper"></span>
             <div className="content-holder">
                 <img className="about-img" src={image}></img>

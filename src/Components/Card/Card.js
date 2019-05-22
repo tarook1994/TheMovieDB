@@ -4,16 +4,11 @@ import './Card.css'
 const card = (props) => {
 
   return (
-    <div className="card">
-      <img className="bg-img" src={'http://image.tmdb.org/t/p/w500' + props.data.poster_path}></img>
-      <div className="content">
-        <h4>{props.data.title}</h4>
-        <p>{props.data.overview}</p>
-        <div>
-          <button onClick={() => props.click(props.index)}>More Detials</button>
-          
-        </div>
-
+  
+    <div class="hvrbox" onClick={() => props.click(props.index)}>
+      <img src={'http://image.tmdb.org/t/p/w500' + props.data.poster_path} alt="Mountains" class="hvrbox-layer_bottom" />
+      <div class="hvrbox-layer_top">
+        <div class="hvrbox-text">{props.data.overview}</div>
       </div>
     </div>
 

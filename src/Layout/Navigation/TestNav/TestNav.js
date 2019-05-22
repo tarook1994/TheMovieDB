@@ -36,11 +36,7 @@ const testNav = (props) => {
                             }} to="/toprated" onClick={() => props.click('top_rated')}>Top Rated</NavLink></li>
                         <li><NavLink
                             exact
-                            activeStyle={{
-                                background: '#2651a8',
-                                borderRadius: '6px',
-                                color: 'white'
-                            }} to="/aboutus" 
+                             to="/aboutus" 
                             onClick={() => props.click('aboutus')}>About Us</NavLink></li>
                     </ul>
                 </div>

@@ -22,7 +22,8 @@ class App extends Component {
     moviesLoaded: false,
     loadedPage: 'upcoming',
     finishedRequest: false,
-    current: 'main'
+    current: 'main',
+    showAbout : false
   }
 
   componentDidMount() {
@@ -45,13 +46,26 @@ class App extends Component {
 
 
   navButtonListener = (page) => {
-    this.setState({
-      loadedPage: page,
-      finishedRequest: false,
-      moviesLoaded: false,
-      current: 'main'
-    })
+    if(page!= 'aboutus'){
+      this.setState({
+        loadedPage: page,
+        finishedRequest: false,
+        moviesLoaded: false,
+        current: 'main'
+      })
+    } else {
+      this.setState({
+        showAbout : true
+      })
+    }
+   
 
+  }
+
+  removeAbout  = () => {
+    this.setState({
+      showAbout : false
+    })
   }
 
   cardClickHander = (id) => {
@@ -89,7 +103,8 @@ class App extends Component {
       github : 'https://github.com/tarook1994',
       email : 'Ahmed-tarek94@hotmail.com'
     }
-    const about = this.state.loadedPage === 'aboutus' ? <AboutPopUp
+    const about = this.state.showAbout? <AboutPopUp
+      removeAbout = {this.removeAbout}
       data = {data} /> : null
 
 

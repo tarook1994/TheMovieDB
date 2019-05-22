@@ -93,6 +93,7 @@ p {
     background-color: #3f6eca;
     border-radius: 10px;
     margin: 0px 10px;
+    outline:none;
 }
 
 .content-holder > button:hover {
